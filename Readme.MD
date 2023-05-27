@@ -60,14 +60,21 @@ for call in api_calls:
 
 ### Example 2: Using strict authentication mode
 
-```python
+```
 from haranalyzer import HARAnalyzer
+```
 
 # Initialize the analyzer with your .har file, the main website URL, and set auth_mode to 'strict'
+
+```
 analyzer = HARAnalyzer(har_file_path='path_to_your_file.har', main_website='https://www.your-website.com', auth_mode='strict')
+```
 
 # Extract API calls
+
+```
 api_calls = analyzer.analyze()
+```
 
 # Print API calls
 
