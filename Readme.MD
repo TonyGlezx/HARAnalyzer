@@ -24,9 +24,9 @@ HARAnalyzer can be installed via pip. Before starting the installation, ensure t
 
 To install HARAnalyzer, open your terminal and type the following command:
 
-\```bash
+```
 pip install haranalyzer
-\```
+```
 
 This will install HARAnalyzer along with its dependencies. After the installation is completed, you can start using HARAnalyzer in your Python scripts.
 
@@ -36,23 +36,31 @@ Here are three examples of how to use HARAnalyzer:
 
 ### Example 1: Basic usage
 
-\```python
+```
 from haranalyzer import HARAnalyzer
+```
 
 # Initialize the analyzer with your .har file and the main website URL
+```
 analyzer = HARAnalyzer(har_file_path='path_to_your_file.har', main_website='https://www.your-website.com')
+```
 
 # Extract API calls
+
+```
 api_calls = analyzer.analyze()
+```
 
 # Print API calls
+
+```
 for call in api_calls:
     print(call)
-\```
+```
 
 ### Example 2: Using strict authentication mode
 
-\```python
+```python
 from haranalyzer import HARAnalyzer
 
 # Initialize the analyzer with your .har file, the main website URL, and set auth_mode to 'strict'
@@ -62,22 +70,33 @@ analyzer = HARAnalyzer(har_file_path='path_to_your_file.har', main_website='http
 api_calls = analyzer.analyze()
 
 # Print API calls
+
+```
 for call in api_calls:
     print(call)
-\```
+```
 
 ### Example 3: Saving output to a file
 
-\```python
+```
 from haranalyzer import HARAnalyzer
+```
 
 # Initialize the analyzer with your .har file and the main website URL
+
+```
 analyzer = HARAnalyzer(har_file_path='path_to_your_file.har', main_website='https://www.your-website.com')
+```
 
 # Extract API calls
+
+```
 api_calls = analyzer.analyze()
+```
 
 # Save the output to a file
+
+```
 analyzer.save_output_to_file(output_path='path_to_your_output_file.json', entries=api_calls)
-\```
+```
 
